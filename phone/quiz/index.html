@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="theme-color" content="#0b0e14">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+    <title>GM Quiz</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <h1 id="app-title">Quiz culture</h1>
+      <span id="status" class="status">Démarrage…</span>
+    </header>
+
+    <main>
+      <section class="review-cta">
+        <button id="start-button" disabled>Démarrer le quiz</button>
+        <button id="stop-button" class="ghost" hidden>Arrêter</button>
+      </section>
+
+      <p id="glasses-hint" class="hint">Sur les lunettes : tête haut/bas = choisir une réponse, bouton = valider.</p>
+
+      <section id="session-panel" hidden>
+        <p id="progress" class="progress"></p>
+        <p id="score" class="score"></p>
+      </section>
+
+      <section class="stats-grid">
+        <div class="stat"><span class="stat-value" id="stat-games">0</span><span class="stat-label" id="stat-games-label">Parties jouées</span></div>
+        <div class="stat"><span class="stat-value" id="stat-best">0</span><span class="stat-label" id="stat-best-label">Meilleur score</span></div>
+      </section>
+      <p id="no-stats" class="hint">Aucune partie pour l’instant.</p>
+    </main>
+
+    <script type="module" src="plugin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "id": "com.dynag.quiz.phone",
+  "name": "GM Quiz",
+  "version": "1.0.0",
+  "entry": "index.html",
+  "bridgeVersion": "2.0",
+  "permissions": [
+    { "name": "storage", "required": true },
+    { "name": "device.info", "required": true },
+    { "name": "device.messaging", "required": true, "scope": { "channels": [20821, 20826] } },
+    { "name": "device.events", "required": false, "scope": { "types": ["connection"] } }
+  ],
+  "deviceRequirements": {
+    "preferredPluginId": "com.dynag.quiz.glass",
+    "requiredPluginId": "com.dynag.quiz.glass",
+    "minPluginVersion": "1",
+    "protocols": [
+      { "id": "gm.quiz", "minVersion": "1.0" }
+    ]
+  },
+  "schemaVersion": 2,
+  "permissionPolicyVersion": 1
+}
